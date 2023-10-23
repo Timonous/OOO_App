@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>app</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="static/styles.css">
+    <link rel="manifest" href="static/manifest.json">
+    <link rel="apple-touch-icon" href="static/apple-touch-icon.png">
+    <title>Главное меню</title>
 </head>
-<body>
-    <h1 class="header">ООО, mobile app!</h1>
+
+<body style="background-image: url('{{ url_for('static', filename='background.svg') }}'); background-size: cover; background-repeat: no-repeat;">
+    <div class="container">
+        <div class="menu">
+            <h1>Главное меню</h1>
+            <a href="/login" class="main_button">Войти</a>
+        </div>
+    </div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js').then(function(registration) {
+          console.log('Service Worker registered with scope:', registration.scope);
+        }).catch(function(error) {
+          console.log('Service Worker registration failed:', error);
+        });
+      }
+    </script>
 </body>
+
 </html>
