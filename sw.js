@@ -1,11 +1,12 @@
 self.addEventListener('install', function(event) {
   event.waitUntil(
-    caches.open('app-cache').then(function(cache) {
+    caches.open('my-cache').then(function(cache) {
       return cache.addAll([
         '/',
-        '/static/style.css',
-        '/static/icon.png',
-        '/manifest.json'
+        '/templates/mobile_index.html',
+        '/templates/login.html',
+        '/static/indexStyles.css',
+        '/static/loginStyles.css'
       ]);
     })
   );

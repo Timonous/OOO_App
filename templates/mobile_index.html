@@ -4,22 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/styles.css">
+    <script src="/app.js"></script>
+    <link rel="stylesheet" href="static/indexStyles.css">
     <link rel="manifest" href="static/manifest.json">
     <link rel="apple-touch-icon" href="static/apple-touch-icon.png">
-    <title>Главное меню</title>
+    <link rel="icon" sizes="360x360" href="static/icon.png">
+    <link rel="icon" sizes="512x512" href="static/icon-512x512.png">
+    <link rel="icon" sizes="384x384" href="static/icon-384x384.png">
+    <link rel="icon" sizes="256x256" href="static/icon-256x256.png">
+    <link rel="icon" sizes="192x192" href="static/icon-192x192.png">
+    <link rel="icon" sizes="192x192" href="static/icon-192x192.png">
+    <title>Вход</title>
 </head>
 
-<body style="background-image: url('{{ url_for('static', filename='background.svg') }}'); background-size: cover; background-repeat: no-repeat;">
-    <div class="container">
-        <div class="menu">
-            <h1>Главное меню</h1>
-            <a href="/login" class="main_button">Войти</a>
+<body>
+    <div class="background-container">
+        <h1>Привет!</h1>
+        <div class="main">
+            <a href="/login" id="login-button">Войти по номеру телефона</a>
         </div>
     </div>
     <script>
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js').then(function(registration) {
+        navigator.serviceWorker.register('../sw.js').then(function(registration) {
           console.log('Service Worker registered with scope:', registration.scope);
         }).catch(function(error) {
           console.log('Service Worker registration failed:', error);
