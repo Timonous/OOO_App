@@ -13,7 +13,7 @@ body {
 .background-container {
     display: grid;
     place-items: center;
-    background-image: url('../static/img/background.svg');
+    background-image: url('/static/img/background.svg');
     background-size: cover;
     height: 100vh;
     width: 100vw;

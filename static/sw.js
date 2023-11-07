@@ -5,8 +5,8 @@ self.addEventListener('install', function(event) {
       console.log('Cache opened');
       return cache.addAll([
         '/',
-        '/login',
-        '/main_Menu',
+        '/static/login.html',
+        '/static/main_Menu.html',
         '/static/indexStyles.css',
         '/static/loginStyles.css'
       ]);
