@@ -5,8 +5,8 @@ self.addEventListener('install', function(event) {
       console.log('Cache opened');
       return cache.addAll([
         '/',
-        '/OOO_App/static/login.html',
-        '/OOO_App/static/main_Menu.html',
+        '/OOO_App/static/templates/login.html',
+        '/OOO_App/static/templates/main_Menu.html',
         '/OOO_App/static/indexStyles.css',
         '/OOO_App/static/loginStyles.css'
       ]);
