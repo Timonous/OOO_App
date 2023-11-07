@@ -5,10 +5,10 @@ self.addEventListener('install', function(event) {
       console.log('Cache opened');
       return cache.addAll([
         '/',
-        '/static/login.html',
-        '/static/main_Menu.html',
-        '/static/indexStyles.css',
-        '/static/loginStyles.css'
+        '/OOO_App/static/login.html',
+        '/OOO_App/static/main_Menu.html',
+        '/OOO_App/static/indexStyles.css',
+        '/OOO_App/static/loginStyles.css'
       ]);
     })
   );
