@@ -4,7 +4,7 @@ self.addEventListener('install', function(event) {
     caches.open('my-cache-v1').then(function(cache) {
       console.log('Cache opened');
       return cache.addAll([
-        '/',
+        '/OOO_App',
         '/OOO_App/static/templates/login.html',
         '/OOO_App/static/templates/main_Menu.html',
         '/OOO_App/static/indexStyles.css',
