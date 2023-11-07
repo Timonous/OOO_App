@@ -6,10 +6,14 @@ app = Flask(__name__, static_url_path='/static')
 def index():
     return render_template('mobile_index.html')
 
-
 @app.route('/login')
 def login():
     return render_template('login.html')
+
+@app.route('/main_Menu')
+def menu():
+    return render_template('main_Menu.html')
+
 
 
 if __name__ == '__main__':
