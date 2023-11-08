@@ -1,8 +1,7 @@
 body {
-    background-image: url('/OOO_App/static/img/background2.svg');
     margin: 0;
     padding: 0;
-    display: block;
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -12,11 +11,11 @@ body {
 }
 
 .background-container {
-    display: block;
+    display: grid;
+    background-image: url('/OOO_App/static/img/background.svg');
     background-size: cover;
     height: 100vh;
     width: 100vw;
-    overflow: auto;
 }
 
 .logo {
@@ -52,27 +51,17 @@ h2 {
     text-align: center;
 }
 
-.instruction-container {
-    margin-top: 200px;
-    padding-left: 10px;
-    padding-right: 10px;
+.instruction-container
+{
+    display: grid;
+    place-items: center;
 }
 
 .zero-step {
-    margin-bottom: 50px;
+    margin-bottom: -30px;
 }
 
 #first-step-img {
     box-shadow: 0px 0px 8px 0px rgb(197 197 197 / 25%);
-    margin-bottom: 50px;
-}
-
-#second-step-img {
-    box-shadow: 0px 0px 8px 0px rgb(197 197 197 / 25%);
-    margin-bottom: 50px;
-}
-
-#third-step-img {
-    box-shadow: 0px 0px 8px 0px rgb(197 197 197 / 25%);
-    margin-bottom: 50px;
+    border-d
 }
