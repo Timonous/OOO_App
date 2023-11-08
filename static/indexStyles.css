@@ -12,7 +12,6 @@ body {
 
 .background-container {
     display: grid;
-    place-items: center;
     background-image: url('/OOO_App/static/img/background.svg');
     background-size: cover;
     height: 100vh;
@@ -20,6 +19,14 @@ body {
 }
 
 .logo {
-    background-image: url('/OOO_App/static/icons/icon.png');
+    display: grid;
+    place-items: center;
+    margin-top: 100px
+    border-radius: 20px;
+}
+
+#logo-img {
+    height: 100px;
+    width: 100px;
     border-radius: 20px;
 }
