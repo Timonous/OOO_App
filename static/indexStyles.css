@@ -21,12 +21,47 @@ body {
 .logo {
     display: grid;
     place-items: center;
-    margin-top: 100px
-    border-radius: 20px;
+    margin-top: 20px
 }
 
 #logo-img {
     height: 100px;
     width: 100px;
     border-radius: 20px;
+    box-shadow: 0px 0px 8px 5px rgb(152 33 33 / 25%);
+}
+
+.name {
+    margin-bottom: -80px;
+}
+
+h1 {
+    font-weight: 400;
+}
+
+.zero-step {
+    display: grid;
+    place-items: center;
+    width: 100%;
+}
+
+h2 {
+    font-size: 20px;
+    width: 80%;
+    text-align: center;
+}
+
+.instruction-container
+{
+    display: grid;
+    place-items: center;
+}
+
+.zero-step {
+    margin-bottom: -30px;
+}
+
+#first-step-img {
+    box-shadow: 0px 0px 8px 0px rgb(197 197 197 / 25%);
+    border-d
 }
