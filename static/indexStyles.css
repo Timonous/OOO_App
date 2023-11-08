@@ -1,7 +1,8 @@
 body {
+    background-image: url('/OOO_App/static/img/background2.svg');
     margin: 0;
     padding: 0;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -11,8 +12,7 @@ body {
 }
 
 .background-container {
-    display: grid;
-    background-image: url('/OOO_App/static/img/background2.svg');
+    display: block;
     background-size: cover;
     height: 100vh;
     width: 100vw;
