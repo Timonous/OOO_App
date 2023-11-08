@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,19 +7,25 @@
     <script src="/OOO_App/static/js/app.js"></script>
     <link rel="manifest" href="/OOO_App/static/manifest.json">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="icon" type="image/x-icon" href="/OOO_App/static/icons/favicon.ico">
-    <link rel="apple-touch-icon" href="/OOO_App/static/icons/manifest-icon-192.maskable.png">
-    <link rel="apple-touch-startup-image" media="screen and (device-width: 1170px) and (device-height: 2532px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/OOO_App/static/icons/apple-splash.png">
-    <link rel="stylesheet" href="/OOO_App/static/indexStyles.css">
+    <link rel="stylesheet" href="/OOO_App/static/enterStyles.css">
     <title>PWA Food App</title>
 </head>
 
 <body>
     <div class="background-container">
-        <h1>Привет!</h1>
-        <div class="main">
-            <a href="/OOO_App/static/templates/login.html" id="login-button">Войти по номеру телефона</a>
+        <div class="logo"></div>
+        <div class="name">
+            <h1>Приложение Food App</h1>
+        </div>
+
+        <div class="instruction-container">
+            <div class="zero-step">
+                <h2>Как устуновить приложение на экран смартфона</h2>
+            </div>
+            <div class="first-step">
+                <p id="first-step-text">Нажмите на иконку «Поделиться» в нижнем меню:</p>
+                <img src="/OOO-App/static/img/installStep1.svg" id="first-step-img">
+            </div>
         </div>
     </div>
 </body>

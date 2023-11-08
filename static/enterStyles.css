@@ -1,0 +1,56 @@
+.header {
+    color: #007bff;
+    font-family: Arial, sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    font-family: Arial;
+}
+
+.background-container {
+    display: grid;
+    place-items: center;
+    background-image: url('/OOO_App/static/img/background.svg');
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+h1 {
+    text-align: left;
+    margin-top: 75px;
+    margin-bottom: 0px;
+    font-weight: semi bold;
+    font-size: 35px;
+}
+
+#login-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 48px;
+    margin-bottom: 300px;
+    background-color: rgba(255, 84, 84, 1);
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: Semi bold;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.25);
+    color: white;
+}
+
+#login-button:hover {
+    background-color: rgba(156, 48, 48, 1);
+}
+
+
+

@@ -3,7 +3,7 @@
     "background_color": "#181616",
     "display": "standalone",
     "orientation": "portrait",
-    "start_url": "/OOO_App",
+    "start_url": "/OOO_App/static/templates/",
     "name": "PWA Food app",
     "short_name": "FoodApp",
     "description": "Food PWA for smartphones",
