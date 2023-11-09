@@ -14,11 +14,11 @@ body {
 }
 
 .panel-head-container {
-    margin-top: 42px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 35%;
+    gap: 32%;
 }
 
 #Title-head {
@@ -34,5 +34,5 @@ body {
 }
 
 #profile-button-img {
-    height: 173px;
+    height: 121px;
 }
