@@ -1,14 +1,29 @@
 body {
     height: 100vh;
     width: 100vw;
-    font-family: Inter;
+    font-family: sans-serif;
 }
 
 .background-container {
-    background-image: url('/OOO_App/static/img/background2.svg');
+    background-image: url('/OOO_App/static/img/background3.svg');
     display: block;
     background-size: cover;
     height: 100vh;
     width: 100vw;
     overflow: auto;
+}
+
+.panel-head-container {
+    margin-top: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35%;
+}
+
+#Title-head {
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }
