@@ -89,3 +89,14 @@ body {
     padding-top: 10px;
     width: 130px;
 }
+
+.products-container {
+    display: flex;
+    width: 370px;
+    height: 624px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    fill: #FFF;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25)
+}
