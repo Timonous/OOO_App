@@ -32,6 +32,16 @@
             </div>
         </div>
         <div class="map-panel-container">
+            <button id="chooseSeatBtn">Выбрать место</button>
+            <div id="seatListContainer" class="hidden">
+                <ul>
+                    <li>Место 1</li>
+                    <li>Место 2</li>
+                    <li>Место 3</li>
+                    <li>Место 4</li>
+                    <li>Место 5</li>
+                </ul>
+            </div>
         </div>
         <div class="products-container">
             <div class="products-list-container">
@@ -39,5 +49,24 @@
         </div>
     </div>
 </body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    var chooseSeatBtn = document.getElementById('chooseSeatBtn');
+    var seatListContainer = document.getElementById('seatListContainer');
+
+    chooseSeatBtn.addEventListener('click', function () {
+        // Переключение класса hidden для отображения/скрытия контейнера
+        seatListContainer.classList.toggle('hidden');
+    });
+
+    // Закрывать контейнер при клике вне него
+    window.addEventListener('click', function (event) {
+        if (!seatListContainer.contains(event.target) && event.target !== chooseSeatBtn) {
+            seatListContainer.classList.add('hidden');
+        }
+    });
+});
+</script>
 
 </html>
