@@ -32,7 +32,7 @@
             </div>
         </div>
         <div class="map-panel-container">
-            <button id="selectButton">Выбрать место</button>
+            <button id="selectButton">Выбрать место <img src="/OOO_App/static/img/triangleMapBarUp.svg" id="triangleMapImg"></button>
             <div id="dropdownList" class="dropdown-list">
                 <button value="Место 1">Место 1</button>
                 <button value="Место 2">Место 2</button>
@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   selectButton.addEventListener('click', function() {
     dropdownList.classList.toggle('show');
+    selectButton.style.background-color = #d3d3d3;
   });
 
   dropdownList.addEventListener('click', function(event) {
@@ -62,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (event.target.tagName === 'BUTTON') {
       alert('Выбрано место: ' + event.target.value);
       dropdownList.classList.remove('show');
+      selectButton.style.background-color = #F2F2F2;
     }
   });
 
@@ -69,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Закрытие выпадающего списка при клике вне блока
     if (!dropdownList.contains(event.target) && event.target !== selectButton) {
       dropdownList.classList.remove('show');
+      selectButton.style.background-color = #F2F2F2;
     }
   });
 });
