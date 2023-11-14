@@ -32,7 +32,7 @@
             </div>
         </div>
         <div class="map-panel-container">
-            <button id="selectButton">Выбрать место <img src="/OOO_App/static/img/triangleMapBarUp.svg" id="triangleMapImg"></button>
+            <button id="selectButton">Выбрать место <img src="/OOO_App/static/img/triangleMapBarUp.svg.svg" id="triangleMapImg"></button>
             <div id="dropdownList" class="dropdown-list">
                 <button value="Место 1">Место 1</button>
                 <button value="Место 2">Место 2</button>
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!dropdownList.contains(event.target) && event.target !== selectButton) {
       dropdownList.classList.remove('show');
       selectButton.style.backgroundColor = "#F2F2F2";
-      triangleMapImg.src = '/OOO_App/static/img/triangleMapBarUp.svg';
+      triangleMapImg.src = '/OOO_App/static/img/triangleMapBarUp.svg.svg';
     }
   });
 });
