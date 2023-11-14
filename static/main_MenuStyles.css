@@ -90,39 +90,30 @@ body {
 }
 
 #map-panel-container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Стили для скрытия контейнера */
-#map-panel-container.hidden {
-    max-height: 0;
+.dropdown-list {
+  display: none;
+  position: absolute;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Стили для элементов списка мест */
-#map-panel-container ul {
-    list-style: none;
-    padding: 0;
+.dropdown-list button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
 }
 
-#map-panel-container li {
-    padding: 8px;
-    cursor: pointer;
-    border-bottom: 1px solid #eee;
-}
-
-#map-panel-container li:last-child {
-    border-bottom: none;
+.dropdown-list button:hover {
+  background-color: #f0f0f0;
 }
 
 .products-container {

@@ -32,15 +32,13 @@
             </div>
         </div>
         <div class="map-panel-container">
-            <button id="chooseSeatBtn">Выбрать место</button>
-            <div id="seatListContainer" class="hidden">
-                <ul>
-                    <li>Место 1</li>
-                    <li>Место 2</li>
-                    <li>Место 3</li>
-                    <li>Место 4</li>
-                    <li>Место 5</li>
-                </ul>
+            <button id="selectButton">Выбрать место</button>
+            <div id="dropdownList" class="dropdown-list">
+                <button value="Место 1">Место 1</button>
+                <button value="Место 2">Место 2</button>
+                <button value="Место 3">Место 3</button>
+                <button value="Место 4">Место 3</button>
+                <button value="Место 5">Место 3</button>
             </div>
         </div>
         <div class="products-container">
@@ -51,21 +49,28 @@
 </body>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-    var chooseSeatBtn = document.getElementById('chooseSeatBtn');
-    var seatListContainer = document.getElementById('seatListContainer');
+document.addEventListener('DOMContentLoaded', function() {
+  const selectButton = document.getElementById('selectButton');
+  const dropdownList = document.getElementById('dropdownList');
 
-    chooseSeatBtn.addEventListener('click', function () {
-        // Переключение класса hidden для отображения/скрытия контейнера
-        seatListContainer.classList.toggle('hidden');
-    });
+  selectButton.addEventListener('click', function() {
+    dropdownList.style.display = (dropdownList.style.display === 'block') ? 'none' : 'block';
+  });
 
-    // Закрывать контейнер при клике вне него
-    window.addEventListener('click', function (event) {
-        if (!seatListContainer.contains(event.target) && event.target !== chooseSeatBtn) {
-            seatListContainer.classList.add('hidden');
-        }
-    });
+  dropdownList.addEventListener('click', function(event) {
+    // Обработка клика на кнопке внутри выпадающего списка
+    if (event.target.tagName === 'BUTTON') {
+      alert('Выбрано место: ' + event.target.value);
+      dropdownList.style.display = 'none';
+    }
+  });
+
+  document.addEventListener('click', function(event) {
+    // Закрытие выпадающего списка при клике вне блока
+    if (!dropdownList.contains(event.target) && event.target !== selectButton) {
+      dropdownList.style.display = 'none';
+    }
+  });
 });
 </script>
 
