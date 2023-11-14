@@ -54,7 +54,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const dropdownList = document.getElementById('dropdownList');
 
   selectButton.addEventListener('click', function() {
-    dropdownList.style.display = (dropdownList.style.display === 'block') ? 'none' : 'block';
     dropdownList.classList.toggle('show');
   });
 
@@ -62,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Обработка клика на кнопке внутри выпадающего списка
     if (event.target.tagName === 'BUTTON') {
       alert('Выбрано место: ' + event.target.value);
-      dropdownList.style.display = 'none';
       dropdownList.classList.remove('show');
     }
   });
@@ -70,7 +68,6 @@ document.addEventListener('DOMContentLoaded', function() {
   document.addEventListener('click', function(event) {
     // Закрытие выпадающего списка при клике вне блока
     if (!dropdownList.contains(event.target) && event.target !== selectButton) {
-      dropdownList.style.display = 'none';
       dropdownList.classList.remove('show');
     }
   });

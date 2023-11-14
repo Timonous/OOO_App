@@ -125,6 +125,7 @@ body {
 }
 
 .dropdown-list.show {
+  display: block;
   max-height: 800px; /* Выберите желаемую максимальную высоту */
 }
 
