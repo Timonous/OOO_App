@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const selectButton = document.getElementById('selectButton');
   const dropdownList = document.getElementById('dropdownList');
   const triangleMapImg = document.getElementById('triangleMapImg');
+  const selectedPlaceText = document.getElementById('selectedPlaceText');
 
   selectButton.addEventListener('click', function() {
     // Проверяем, открыт ли список
@@ -20,6 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
   dropdownList.addEventListener('click', function(event) {
     // Обработка клика на кнопке внутри выпадающего списка
     if (event.target.tagName === 'BUTTON') {
+      const selectedPlace = event.target.value;
+      selectedPlaceText.textContent = selectedPlace;
       alert('Выбрано место: ' + event.target.value);
       dropdownList.classList.remove('show');
       selectButton.style.backgroundColor = "#F2F2F2";
