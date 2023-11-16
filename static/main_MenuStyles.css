@@ -113,6 +113,7 @@ body {
 }
 
 #triangleMapImg {
+  pointer-events: none;
   justify-content: center;
   padding-left: 500px;
   width: 50px;
