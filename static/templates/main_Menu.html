@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <link rel="manifest" href="/OOO_App/static/manifest.json">
     <link rel="stylesheet" href="/OOO_App/static/main_MenuStyles.css">
+    <script src="/OOO_App/static/js/mapButton.js"></script>
     <script src="/OOO_App/static/js/app.js"></script>
     <title>Главное меню</title>
 </head>
@@ -39,6 +40,7 @@
                 <button value="Место 3">Место 3</button>
                 <button value="Место 4">Место 4</button>
                 <button value="Место 5">Место 5</button>
+                <button value="Выбрать на карте...">Выбрать на карте...</button>
             </div>
         </div>
         <div class="products-container">
@@ -47,46 +49,5 @@
         </div>
     </div>
 </body>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const selectButton = document.getElementById('selectButton');
-  const dropdownList = document.getElementById('dropdownList');
-  const triangleMapImg = document.getElementById('triangleMapImg');
-
-  selectButton.addEventListener('click', function() {
-    // Проверяем, открыт ли список
-    const isOpen = dropdownList.classList.toggle('show');
-
-    // Изменяем стили в зависимости от состояния
-    if (isOpen) {
-      selectButton.style.backgroundColor = "#d3d3d3";
-      triangleMapImg.src = '/OOO_App/static/img/triangleMapBarUp.svg';
-    } else {
-      selectButton.style.backgroundColor = "#F2F2F2";
-      triangleMapImg.src = '/OOO_App/static/img/triangleMapBarBottom.svg';
-    }
-  });
-
-  dropdownList.addEventListener('click', function(event) {
-    // Обработка клика на кнопке внутри выпадающего списка
-    if (event.target.tagName === 'BUTTON') {
-      alert('Выбрано место: ' + event.target.value);
-      dropdownList.classList.remove('show');
-    }
-  });
-
-  document.addEventListener('click', function(event) {
-    // Закрытие выпадающего списка при клике вне блока
-    if (!dropdownList.contains(event.target) && event.target !== selectButton) {
-      dropdownList.classList.remove('show');
-
-      // Установка стилей после закрытия списка
-      selectButton.style.backgroundColor = "#F2F2F2";
-      triangleMapImg.src = '/OOO_App/static/img/triangleMapBarBottom.svg';
-    }
-  });
-});
-</script>
 
 </html>
