@@ -10,6 +10,7 @@ body {
     background-size: cover;
     height: 100vh;
     width: 100vw;
+    overflow: none;
 }
 
 .panel-head-container {
@@ -21,7 +22,7 @@ body {
 }
 
 #Title-head {
-    font-size: 45px;
+    font-size: 48px;
     font-style: normal;
     font-weight: 601;
     line-height: normal;
@@ -50,16 +51,17 @@ body {
     padding-right: 100px;
 }
 
+input::-webkit-input-placeholder {color: #757575;}
+
 #search-bar {
     width: 100%;
     height: 100%;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
     border: none;
-    padding-left: 60px;
+    padding-left: 80px;
     border-radius: 30px;
-    color: #5a5a5a;
     background: #f2f2f2;
-    font-size: 27px;
+    font-size: 30px;
 }
 
 #search-img {
@@ -102,16 +104,16 @@ body {
 #selectButton {
   margin-right: 140px;
   position: relative;
-  z-index: 1; /* Позволяет кнопке быть выше блока */
+  z-index: 3; /* Позволяет кнопке быть выше блока */
   width: 73%;
   height: 100%;
   border: none;
   border-radius: 30px;
-  color: #757575;;
+  color: #757575;
   background: #F2F2F2;
   padding-left: 48px;
   text-align: left;
-  font-size: 27px;
+  font-size: 30px;
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
 }
 
@@ -126,7 +128,7 @@ body {
 
 .dropdown-list {
   margin-right: 140px;
-  z-index: -1;
+  z-index: 2;
   top: 85%;
   width: 70%;
   position: absolute;
@@ -140,7 +142,7 @@ body {
 }
 
 .dropdown-list.show {
-  z-index: 0;
+  z-index: 2;
   max-height: 900px;
   visibility: visible;
   opacity: 1;
@@ -157,7 +159,7 @@ body {
   font-size: 27px;
   border: none;
   cursor: pointer;
-  color: #5a5a5a;;
+  color: #5a5a5a;
   background: none;
 }
 
@@ -171,38 +173,37 @@ body {
 }
 
 .products-container {
-    position: relative;
     margin-top: 100px;
     width: 100%;
-    height: 70%;
+    height: 72%;
     display: flex;
     justify-content: center;
-    z-index: 1;
+    box-shadow: 0px 2px 18px 1px rgba(0, 0, 0, 0.25);
+    background: #f2f2f2;
 }
 
 .products-list-container {
-    width: 90%;
-    height: 100%;
+    width: 100%;
+    height: 94%;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap:  wrap;
     justify-content: center;
-    gap: 80px;
-    background: none;
+    gap: 50px;
     border-radius: 10px;
     overflow: auto;
-    box-shadow: inset 0px 2px 18px 0px rgba(0, 0, 0, 0.25);
+    background: none;
 }
 
 .product-card {
   position: relative;
-  width: 340px;
-  height: 360px;
+  width: 420px;
+  height: 440px;
+  margin-top: 30px;
   margin-bottom: 20px;
   background: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0px 18px 0px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
-  z-index: -1;
 }
 
 .product-card img {
@@ -226,7 +227,7 @@ body {
   bottom: 8%;
   border-radius: 10px;
   transform: translateX(-50%);
-  font-size: 24px;
+  font-size: 28px;
 }
 
 .add-to-cart-btn:hover {
