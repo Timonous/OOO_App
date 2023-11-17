@@ -199,7 +199,6 @@ input::-webkit-input-placeholder {color: #757575;}
   width: 420px;
   height: 440px;
   margin-top: 30px;
-  margin-bottom: 20px;
   background: white;
   box-shadow: 0 0px 18px 0px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -208,6 +207,7 @@ input::-webkit-input-placeholder {color: #757575;}
 
 .product-card img {
   position: absolute;
+  top: 4%;
   left: 50%;
   transform: translateX(-50%);
   width: 65%;
@@ -217,7 +217,7 @@ input::-webkit-input-placeholder {color: #757575;}
   position: absolute;
   width: 80%;
   bottom: 0;
-  padding: 13px;
+  padding: 18px;
   background-color: #55c159;
   color: #fff;
   border: none;
@@ -227,7 +227,7 @@ input::-webkit-input-placeholder {color: #757575;}
   bottom: 8%;
   border-radius: 10px;
   transform: translateX(-50%);
-  font-size: 28px;
+  font-size: 29px;
 }
 
 .add-to-cart-btn:hover {
