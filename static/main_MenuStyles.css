@@ -171,11 +171,13 @@ body {
 }
 
 .products-container {
+    position: relative;
     margin-top: 100px;
     width: 100%;
     height: 70%;
     display: flex;
     justify-content: center;
+    z-index: 1;
 }
 
 .products-list-container {
@@ -185,34 +187,46 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 80px;
-    fill: #FFF;
+    background: none;
     border-radius: 10px;
-    box-shadow: inset 0px 1px 18px 0px rgba(0, 0, 0, 0.25)
+    overflow: auto;
+    box-shadow: inset 0px 2px 18px 0px rgba(0, 0, 0, 0.25);
 }
 
 .product-card {
+  position: relative;
   width: 340px;
-  height: 366px;
+  height: 360px;
   margin-bottom: 20px;
+  background: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
+  z-index: -1;
 }
 
 .product-card img {
-  width: 100%;
-  height: auto;
-  border-bottom: 1px solid #ddd; /* Разделяющая линия между изображением и кнопкой */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 65%;
 }
 
 .add-to-cart-btn {
-  width: 100%;
-  padding: 10px;
-  background-color: #4CAF50;
+  position: absolute;
+  width: 80%;
+  bottom: 0;
+  padding: 13px;
+  background-color: #55c159;
   color: #fff;
   border: none;
   border-top: 1px solid #ddd; /* Разделяющая линия между изображением и кнопкой */
   cursor: pointer;
+  left: 50%;
+  bottom: 8%;
+  border-radius: 10px;
+  transform: translateX(-50%);
+  font-size: 24px;
 }
 
 .add-to-cart-btn:hover {
