@@ -1,7 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const productCard = document.getElementById('productCard');
-
-    productCard.addEventListener('click', function() {
-      alert('В тестовой версии просмотр товара не доступен🙈');
-    });
-});
+function showAlert() {
+      alert('К сожалению в тестовой версии данная функция ещё не доступна🙈');
+}

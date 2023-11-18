@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  function openPage() {
+  function mapOpen() {
       window.location.href = '/OOO_App/static/templates/map.html';
   }
 });
