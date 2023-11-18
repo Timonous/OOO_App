@@ -7,13 +7,6 @@ self.addEventListener('install', function(event) {
       return cache.addAll([
         '/OOO_App/static/templates/mobile_index.html',
         '/OOO_App/static/mobile_indexStyles.css',
-        '/OOO_App/static/templates/login.html',
-        '/OOO_App/static/login.css',
-        '/OOO_App/static/templates/main_Menu.html',
-        '/OOO_App/static/main_MenuStyles.css',
-        '/OOO_App/static/templates/map.html',
-        '/OOO_App/static/js',
-        '/OOO_App/static/img',
       ]);
     })
   );
