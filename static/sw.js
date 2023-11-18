@@ -19,6 +19,7 @@ self.addEventListener('activate', (event) => {
       return Promise.all(
         cacheNames.map((cache) => {
           if (cache !== CACHE_NAME) {
+            console.log('Old cache deleted');
             return caches.delete(cache);
           }
         })
@@ -61,6 +62,7 @@ self.addEventListener('fetch', function(event) {
 // Обработка обновления кэша при изменении ресурсов
 self.addEventListener('message', (event) => {
   if (event.data.action === 'skipWaiting') {
+    console.log('new service worker activation');
     self.skipWaiting();
   }
 });
