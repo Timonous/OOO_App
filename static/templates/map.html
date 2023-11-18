@@ -5,40 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Рестораны на карте</title>
+    <link rel="stylesheet" href="/OOO_App/static/mapStyles.css">
     <link rel="manifest" href="/OOO_App/static/manifest.json">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=41e8a1d5-a601-4d24-a151-03797b32fbd3&lang=ru_RU" type="text/javascript"></script>
-    <style>
-        #map {
-            width: 100%;
-            height: 400px;
-        }
-    </style>
+    <script src="/OOO_App/static/js/map.js"></script>
 </head>
 
 <body>
+    <div class="back-button">
+        <a href="/OOO_App/static/templates/main_Menu.html" id="back-ref">Войти по номеру телефона </a>
+        <img src="/OOO_App/static/img/backTriangle.svg" id="back-img">
+    </div>
     <div id="map"></div>
-    <script>
-        ymaps.ready(init);
-        function init() {
-            var map = new ymaps.Map('map', {
-                center: [55.7558, 37.6176],
-                zoom: 12
-            });
-
-            // Добавляем рестораны на карту
-            var restaurants = """ + str(restaurants) + """;
-            restaurants.forEach(function(restaurant) {
-                var marker = new ymaps.Placemark([restaurant.location.lat, restaurant.location.lng], {
-                    hintContent: restaurant.name
-                });
-                map.geoObjects.add(marker);
-                marker.events.add('click', function(e) {
-                    var menu = restaurant.menu.join('<br>');
-                    marker.balloon.open([restaurant.location.lat, restaurant.location.lng], restaurant.name + '<br>' + menu);
-                });
-            });
-        }
-    </script>
 </body>
 
 </html>
