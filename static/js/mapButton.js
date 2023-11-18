@@ -40,8 +40,8 @@ document.addEventListener('DOMContentLoaded', function() {
       triangleMapImg.src = '/OOO_App/static/img/triangleMapBarBottom.svg';
     }
   });
-
-  function mapOpen() {
-      window.location.href = '/OOO_App/static/templates/map.html';
-  }
 });
+
+function mapOpen() {
+  window.location.href = '/OOO_App/static/templates/map.html';
+}
