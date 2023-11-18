@@ -1,12 +1,35 @@
+const CACHE_NAME = 'my-cache-v1';
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
-    caches.open('my-cache-v1').then(function(cache) {
+    caches.open(CACHE_NAME).then(function(cache) {
       console.log('Cache opened');
       return cache.addAll([
         '/OOO_App/static/templates/mobile_index.html',
         '/OOO_App/static/mobile_indexStyles.css',
+        '/OOO_App/static/templates/login.html',
+        '/OOO_App/static/login.css',
+        '/OOO_App/static/templates/main_Menu.html',
+        '/OOO_App/static/main_MenuStyles.css',
+        '/OOO_App/static/templates/map.html',
+        '/OOO_App/static/js',
+        '/OOO_App/static/img',
       ]);
+    })
+  );
+});
+
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cache) => {
+          if (cache !== CACHE_NAME) {
+            return caches.delete(cache);
+          }
+        })
+      );
     })
   );
 });
@@ -31,7 +54,7 @@ self.addEventListener('fetch', function(event) {
 
         // Кэшируем успешный ответ, прежде чем вернуть его
         var responseToCache = response.clone();
-        caches.open('my-cache-v1').then(function(cache) {
+        caches.open(CACHE_NAME).then(function(cache) {
           cache.put(event.request, responseToCache);
         });
         console.log('fetching_request_good')
@@ -41,3 +64,11 @@ self.addEventListener('fetch', function(event) {
     })
   );
 });
+
+// Обработка обновления кэша при изменении ресурсов
+self.addEventListener('message', (event) => {
+  if (event.data.action === 'skipWaiting') {
+    self.skipWaiting();
+  }
+});
+
