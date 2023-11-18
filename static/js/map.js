@@ -1,9 +1,7 @@
-ymaps.ready(init);
-
-function init() {
+ymaps.ready(function () {
     var myMap = new ymaps.Map("map", {
-        center: [58.010046, 56.226531], // Координаты центра карты
-        zoom: 10 // Уровень масштабирования
+        center: [55.7558, 37.6176],
+        zoom: 11,
         controls: [] // Пустой массив для скрытия всех элементов управления
     });
-}
+});
