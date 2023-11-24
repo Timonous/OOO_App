@@ -9,6 +9,7 @@ self.addEventListener('install', function(event) {
         '/OOO_App/static/mobile_indexStyles.css',
         '/OOO_App/static/templates/main_Menu.html',
         '/OOO_App/static/main_MenuStyles.css',
+        '/OOO_App/static/js/map.js',
       ]);
     })
   );
