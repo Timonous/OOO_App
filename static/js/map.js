@@ -14,33 +14,33 @@ ymaps.ready(function () {
     // Создаем метки
     var place1Mark = new ymaps.Placemark(place1Coordinates, {
         // Свойства метки (в данном случае описание)
-        hintContent: 'ВкусноКофе',
+        hintContent: 'Кофейня, Кафе',
         balloonContent: 'ВкусноКофе',
-        iconCaption: 'Кофейня, Кафе'
+        iconCaption: 'ВкусноКофе'
     });
 
     var place2Mark = new ymaps.Placemark(place2Coordinates, {
-        hintContent: 'Шаурм Club',
-        balloonContent: 'Шаурм Club',
-        iconCaption: 'Фастфуд, Кафе'
+        hintContent: 'Бар, Кафе',
+        balloonContent: 'Goodnight',
+        iconCaption: 'Goodnight'
     });
 
     var place3Mark = new ymaps.Placemark(place3Coordinates, {
-        hintContent: 'Шаурм Club',
-        balloonContent: 'Шаурм Club',
-        iconCaption: 'Фастфуд, Кафе'
+        hintContent: 'Фастфуд, Кафе',
+        balloonContent: 'ШаурмаClub',
+        iconCaption: 'Шаурм Club'
     });
 
     var place4Mark = new ymaps.Placemark(place4Coordinates, {
-        hintContent: 'Шаурм Club',
-        balloonContent: 'Шаурм Club',
-        iconCaption: 'Фастфуд, Кафе'
+        hintContent: 'Ресторан',
+        balloonContent: 'The Hamber',
+        iconCaption: 'The Hamber'
     });
 
     var place5Mark = new ymaps.Placemark(place5Coordinates, {
-        hintContent: 'Шаурм Club',
-        balloonContent: 'Шаурм Club',
-        iconCaption: 'Фастфуд, Кафе'
+        hintContent: 'Фастфуд, Кафе',
+        balloonContent: 'Пирожоки',
+        iconCaption: 'Пирожоки'
     });
 
     // Добавляем метки на карту
