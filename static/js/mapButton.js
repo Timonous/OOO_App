@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (event.target.tagName === 'BUTTON') {
       const selectedPlace = event.target.value;
       selectedPlaceText.textContent = selectedPlace;
-      alert('Выбрано место: ' + event.target.value);
       dropdownList.classList.remove('show');
       selectButton.style.backgroundColor = "#F2F2F2";
       triangleMapImg.src = '/OOO_App/static/img/triangleMapBarBottom.svg';
