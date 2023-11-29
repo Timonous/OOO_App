@@ -49,4 +49,35 @@ ymaps.ready(function () {
     myMap.geoObjects.add(place3Mark);
     myMap.geoObjects.add(place4Mark);
     myMap.geoObjects.add(place5Mark);
+
+    // Обработчик клика на метке
+    function onMarkClick(placeName) {
+        // Отображаем блок с описанием заведения и кнопкой "Посмотреть меню"
+        showPlaceDescription(placeName);
+        // Сохраняем выбранное заведение
+        selectedPlaceText.textContent = placeName;
+        // Возвращаем пользователя на главное меню
+        window.location.href = '/OOO_App/static/templates/main_Menu.html';
+    }
+
+    // Добавляем обработчики клика на метки
+    place1Mark.events.add('click', function () {
+        onMarkClick('ВкусноКофе');
+    });
+
+    place2Mark.events.add('click', function () {
+        onMarkClick('Goodnight');
+    });
+
+    place3Mark.events.add('click', function () {
+        onMarkClick('Шаурм Club');
+    });
+
+    place4Mark.events.add('click', function () {
+        onMarkClick('The Hamber');
+    });
+
+    place5Mark.events.add('click', function () {
+        onMarkClick('Пирожоки');
+    });
 });
